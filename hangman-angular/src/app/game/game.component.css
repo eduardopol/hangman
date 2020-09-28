@@ -1,0 +1,70 @@
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: Verdana;
+  width: 200px;
+  margin: 4px 4px;
+  cursor: pointer;
+}
+.letter-button {
+    background-color: #4CAF50; /* Green */
+    border: green;
+    color: white;
+    margin-top: 20px;
+    margin-left: 5px;
+    text-align: center;
+    display: inline-block;
+    font-family: Verdana;
+    width: 30px;
+    max-width: 30px;
+    font-size: 16px;
+    padding: 5px 0;
+    cursor: pointer;
+  }
+
+  .letter-button:disabled {
+    background-color: #4CAF50; /* Green */
+    border: green;
+    color: white;
+    margin-top: 20px;
+    margin-left: 5px;
+    text-align: center;
+    display: inline-block;
+    font-family: Verdana;
+    width: 30px;
+    max-width: 30px;
+    font-size: 16px;
+    padding: 5px 0;
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  .word {
+    letter-spacing: 5px;
+    position:center;
+    left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+    font-family: Verdana;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 35px;
+  }
+  .word-alert{
+    font-size: 20px; 
+    font-family: Verdana;
+    color: red;
+  }
+  
+  .word-description{
+    font-size: 20px; 
+    font-family: Verdana;
+    color: green;
+  }
+  

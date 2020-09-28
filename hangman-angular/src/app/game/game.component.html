@@ -1,0 +1,36 @@
+<div *ngIf="game" class="container-fluid" >
+  <h2 style="font-family: Verdana;">Hello, {{game.playerName}}</h2>
+  <div style="height: 200px; margin-bottom: 20px;">
+    <img id="img" src={{images[game.incorrectGuesses]}} style="height: 100%;" />
+  </div>
+  <div id="correctWord" class="word" *ngIf="!game.inProgress">{{game.word}}</div>
+  <div id="wordGuessed" class="word" *ngIf="(game.inProgress)">{{game.wordGuessed}}</div>
+  
+  <div id="twoChancesWarning" *ngIf="game.incorrectGuesses === 4 && game.inProgress" style="margin-bottom: 20px;">
+    <span class="word-alert"> Two chances remaining!</span>
+  </div>
+  <div id="oneChanceWarning" *ngIf="game.incorrectGuesses === 5 && game.inProgress" style="margin-bottom: 20px;">
+    <span class="word-alert" > Last chance!</span>
+  </div>
+
+  <div id="lostText" *ngIf="game.status === 'LOST'" style="margin-bottom: 20px;">
+    <span class="word-alert" > You lost!</span>
+  </div>
+
+  <div id="wonText" *ngIf="game.status === 'WON'" style="margin-bottom: 20px;">
+    <span class="word-description" > Congratulations! You Won!</span>
+  </div>
+
+  <div id="gameControls" *ngIf="(game.inProgress)" >
+    <div style="width: 100%;" >
+      <li style="display: inline-block;" id="list{{bLetter}}" *ngFor="let bLetter of buttonLetters;" (click)="onLetterClick(bLetter)">
+        <button id="button{{bLetter}}" class="letter-button" [disabled]="usedLetters.indexOf(bLetter) >= 0">{{bLetter}}</button>
+      </li>
+    </div>
+  </div>
+
+  <div id="newGameButtons" *ngIf="(!game.inProgress)" >
+    <button id="newPlayer" class="button" (click)="newPlayer()" >Change Player</button>
+    <button id="newGame" class="button" (click)="createGame()" >New Game</button>
+  </div>
+</div>

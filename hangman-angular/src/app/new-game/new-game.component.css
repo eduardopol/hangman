@@ -1,0 +1,39 @@
+
+.body {
+    text-align: center;
+    vertical-align: center;
+    
+    
+}
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: Verdana;
+    width: 200px;
+    margin-top: 30px;
+    cursor: pointer;
+  }
+
+button.center-content {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.container {
+    position: fixed;
+    width: 500px;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    margin-top: -150px;
+    margin-left: -250px;
+    text-align: center;
+}

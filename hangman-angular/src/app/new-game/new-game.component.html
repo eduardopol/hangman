@@ -1,0 +1,10 @@
+<div >
+  <h2 style="font-family: Verdana;" id="new-game-text">New Game</h2>
+  <div>
+    <label style="font-family: Verdana;">Player Name:
+      <input id="input-name" [(ngModel)]="newGame.playerName" (keyup.enter)="createGame()" placeholder="Player Name"/>
+    </label><br>
+    <span id="name-required" *ngIf="showWarning" style="font-family: Verdana;" >*Please, provide a name</span>
+  </div>
+  <button id="new-game-button" (click)="createGame()" class="button" >Start Game</button>
+</div>
